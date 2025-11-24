@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProcessEntity",
+  "description": "Dynamic process entity documenting AI-assisted research",
+  "type": "object",
+  "required": ["ep_id", "timestamp", "metadata", "interactions", "confidence_metrics"],
+  "properties": {
+    "ep_id": {
+      "type": "string",
+      "pattern": "^ep_[0-9]+_[0-9]{8}_[0-9]{6}$",
+      "description": "Unique identifier: ep_{interaction_count}_{YYYYMMDD}_{HHMMSS}"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this process entity was generated"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["research_question", "start_time"],
+      "properties": {
+        "research_question": {
+          "type": "string",
+          "description": "Primary research question or intent"
+        },
+        "discipline": {
+          "type": "string",
+          "description": "Research discipline"
+        },
+        "start_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the research session started"
+        }
+      }
+    },
+    "interactions": {
+      "type": "array",
+      "description": "Recorded AI interactions",
+      "items": {
+        "type": "object",
+        "required": ["timestamp", "prompt", "response"],
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "prompt": {
+            "type": "string",
+            "description": "User input to AI system"
+          },
+          "response": {
+            "type": "string",
+            "description": "AI system response"
+          },
+          "context": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Context tags for classification"
+          }
+        }
+      }
+    },
+    "confidence_metrics": {
+      "type": "object",
+      "required": ["interaction_count", "process_completeness"],
+      "properties": {
+        "interaction_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "process_completeness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Estimated completeness of process documentation"
+        }
+      }
+    }
+  }
+}

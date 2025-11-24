@@ -1,0 +1,51 @@
+{
+  "ep_id": "ep_4_20251124_191217",
+  "metadata": {
+    "research_question": "Does meditation improve focus and productivity?",
+    "discipline": "psychology",
+    "start_time": "2025-11-24T19:12:17.791454"
+  },
+  "interactions": [
+    {
+      "timestamp": "2025-11-24T19:12:17.791454",
+      "prompt": "What research design should I use for this study?",
+      "response": "A pre-post test design with control group would be appropriate.",
+      "context": [
+        "research_design",
+        "statistics"
+      ]
+    },
+    {
+      "timestamp": "2025-11-24T19:12:17.791454",
+      "prompt": "Which statistical test for comparing pre-post scores?",
+      "response": "Use paired t-test for normally distributed data within groups.",
+      "context": [
+        "research_design",
+        "statistics"
+      ]
+    },
+    {
+      "timestamp": "2025-11-24T19:12:17.791454",
+      "prompt": "How to check normality assumption?",
+      "response": "Shapiro-Wilk test or visual inspection of Q-Q plots.",
+      "context": [
+        "research_design",
+        "statistics"
+      ]
+    },
+    {
+      "timestamp": "2025-11-24T19:12:17.791454",
+      "prompt": "What sample size do I need?",
+      "response": "For medium effect size (d=0.5) with 80% power, aim for 34 participants per group.",
+      "context": [
+        "research_design",
+        "statistics"
+      ]
+    }
+  ],
+  "confidence_metrics": {
+    "interaction_count": 4,
+    "process_completeness": 0.4,
+    "timestamp": "2025-11-24T19:12:17.791454"
+  }
+}

@@ -1,0 +1,228 @@
+Metadata-Version: 2.4
+Name: upas-ia
+Version: 3.1.0
+Summary: Unified Protocol for Auditable Scientific AI Assistance
+Home-page: https://github.com/humanologue/UPAS-IA-FRAMEWORK
+Author: Thomas Calvet
+Author-email: thomascalvet@humanologic.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+Non, c'est juste un template de base. Voici un README.md complet et professionnel :
+
+```markdown
+# UPAS-IA Framework v3.1
+## Unified Protocol for Auditable Scientific AI Assistance
+
+### Abstract
+The UPAS-IA framework proposes a paradigm shift from representational validation to processual auditing in AI-assisted science. By replacing static Information Entities with dynamic Process Entities (EP_i), it documents scientific inquiry as traceable processes rather than attempting to represent knowledge as static truth.
+
+### Problem Statement
+Current AI-assisted research faces:
+- Algorithmic opacity in complex models
+- Reproducibility collapse (<30% in some fields)
+- Accountability vacuums in AI-human collaboration
+- Epistemological hypocrisy in validation practices
+
+### Core Architecture
+
+#### Process Entities (EP_i)
+Dynamic documentation units capturing:
+- Research intent and methodological trajectory
+- AI interaction sequences with temporal metadata
+- Confidence metrics (process completeness, grammar compliance, audit quality)
+
+```json
+{
+  "ep_id": "ep_2024_stat_001",
+  "timestamp": "2024-01-15T10:30:00Z",
+  "research_intent": "Compare treatment efficacy between groups A and B",
+  "methodological_choices": ["randomized_control_trial", "intent_to_treat"],
+  "ai_interactions": [...],
+  "confidence_metrics": {
+    "process_completeness": 0.78,
+    "grammar_compliance": 0.85,
+    "audit_trail_quality": 0.72
+  }
+}
+```
+
+#### Disciplinary Interaction Grammars (DIGs)
+Standardized patterns for scientific domains:
+
+**Statistical Analysis DIG**
+- hypothesis_testing: Test selection, assumption validation
+- effect_size_calculation: Magnitude estimation, interpretation
+- power_analysis: Sample size determination
+
+**Literature Review DIG**  
+- systematic_search: Query formulation, inclusion criteria
+- quality_assessment: Bias evaluation, evidence grading
+- synthesis_methods: Thematic analysis, meta-analysis
+
+#### Bridge Operations
+Protocols for transitioning between:
+- Exploratory sandboxes (Jupyter notebooks, interactive sessions)
+- Audited research processes (validated EP_i generation)
+- Methodological justification capture
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/humanologue/UPAS-IA-FRAMEWORK
+cd UPAS-IA-FRAMEWORK
+
+# Install in development mode
+pip install -e .
+
+# Or install specific components
+pip install upas-ia-core
+pip install upas-ia-statistical
+pip install upas-ia-literature
+```
+
+### Usage Example
+
+```python
+from upas_ia.core import ProcessLogger
+from upas_ia.digs.statistical import StatisticalAnalysisGrammar
+from upas_ia.audit import ProcessAuditor
+
+# Initialize with statistical grammar
+dig = StatisticalAnalysisGrammar()
+logger = ProcessLogger(grammar=dig)
+
+# Start research session
+session_config = {
+    "research_question": "Impact of cognitive training on working memory",
+    "discipline": "cognitive_psychology",
+    "planned_analyses": ["mixed_anova", "posthoc_comparisons"],
+    "ethical_considerations": "IRB approved protocol #2024-087"
+}
+
+logger.start_session(session_config)
+
+# AI interactions automatically captured and classified
+research_actions = [
+    "Select appropriate ANOVA type for mixed factorial design",
+    "Validate sphericity assumption for repeated measures",
+    "Calculate partial eta-squared for effect size",
+    "Interpret interaction pattern between group and time"
+]
+
+# Generate auditable process entity
+process_entity = logger.generate_ep_i()
+
+# Audit process quality
+auditor = ProcessAuditor()
+audit_report = auditor.analyze(process_entity)
+
+print(f"Methodological transparency: {audit_report.metrics.transparency_index:.1%}")
+print(f"Reproducibility confidence: {audit_report.metrics.reproducibility_confidence:.1%}")
+```
+
+### Framework Components
+
+#### Specifications (/specs)
+- Process Entity JSON Schema
+- DIG Definition Standards
+- Bridge Operation Protocols
+- Confidence Metric Calculations
+
+#### Tools (/tools)
+- Process Logger (browser extension, IDE integration)
+- DIG Compliance Validator
+- Audit Trail Visualizer
+- Confidence Metric Calculator
+
+#### Governance (/governance)
+- Audit Protocols (Level 1-3 compliance)
+- Quality Metrics Framework
+- Reproducibility Assessment
+- Ethical Usage Guidelines
+
+#### Examples (/examples)
+- Statistical analysis workflow
+- Literature review process
+- Computational modeling pipeline
+- Interdisciplinary research integration
+
+### Empirical Validation
+
+The framework tests three core hypotheses:
+
+1. **Passive Capture Threshold**
+   - Hypothesis: ≥40% automated documentation achievable
+   - Measurement: captured_interactions / total_meaningful_interactions
+
+2. **Grammar Compliance Rate**  
+   - Hypothesis: ≥80% DIG adherence sustainable
+   - Measurement: compliant_interactions / total_interactions
+
+3. **Cognitive Load Ceiling**
+   - Hypothesis: Additional burden below NASA-TLX threshold of 2.5/7
+   - Measurement: Standardized task load assessment
+
+### Documentation
+
+- [Getting Started](docs/getting-started.md)
+- [DIG Development Guide](docs/dig-development.md)
+- [Audit Protocol Specifications](docs/audit-protocols.md)
+- [API Reference](docs/api-reference.md)
+
+### Contributing
+
+We welcome contributions in:
+- New Disciplinary Interaction Grammars
+- Process Logger integrations
+- Audit protocol development
+- Empirical validation studies
+
+Please see [Contribution Guidelines](docs/contributing.md) for details.
+
+### Citation
+
+```bibtex
+@article{calvet2024upasia,
+  title={UPAS-IA: From Representational Paradigm to Processual Epistemology in AI-Assisted Science},
+  author={Calvet, Thomas},
+  journal={Preprint},
+  year={2024},
+  url={https://github.com/humanologue/UPAS-IA-FRAMEWORK},
+  note={Framework version 3.1}
+}
+```
+
+### License
+
+MIT License - See [LICENSE](LICENSE) file for complete terms.
+
+### Contact
+
+**Thomas Calvet**  
+Principal Investigator  
+Email: thomascalvet@humanologic.com  
+GitHub: @humanologue
+
+### Acknowledgments
+
+Development supported through iterative co-creation with state-of-the-art generative AI systems acting as cross-disciplinary scientific assistants. The core theses, argumentative structure, and ultimate responsibility remain entirely with the human author.
+```
+

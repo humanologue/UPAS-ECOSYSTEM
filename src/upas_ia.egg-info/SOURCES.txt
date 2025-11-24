@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/upas_ia/__init__.py
+src/upas_ia/core.py
+src/upas_ia.egg-info/PKG-INFO
+src/upas_ia.egg-info/SOURCES.txt
+src/upas_ia.egg-info/dependency_links.txt
+src/upas_ia.egg-info/top_level.txt
+src/upas_ia/digs/__init__.py
+src/upas_ia/digs/statistical.py
