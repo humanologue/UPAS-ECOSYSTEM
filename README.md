@@ -192,4 +192,4 @@ GitHub: @humanologue
 ### Acknowledgments
 
 Development supported through iterative co-creation with state-of-the-art generative AI systems acting as cross-disciplinary scientific assistants. The core theses, argumentative structure, and ultimate responsibility remain entirely with the human author.
-```
+
