@@ -1,4 +1,4 @@
-# UPAS-IA Framework
+# UPAS Framework
 ## Unified Protocol for Auditable Scientific AI Assistance
 
 ### Abstract
